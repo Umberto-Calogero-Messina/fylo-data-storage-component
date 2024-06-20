@@ -1,0 +1,113 @@
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.files,
+.storage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 328px;
+  height: 201px;
+  background-color: var(--after-bg);
+
+  position: relative;
+  top: 127px;
+  margin-inline: auto;
+  margin-bottom: 16px;
+
+  @include responsive(desktop) {
+    top: 260px;
+  }
+}
+
+.files {
+  border-radius: 10px 100px 10px 10px;
+  @include responsive(desktop) {
+    grid-column: 2 /3;
+  }
+
+  &__logo {
+    width: 135px;
+    height: 40px;
+    margin-bottom: 33px;
+  }
+  &__folders {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__box {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-img);
+  }
+  &__image {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+.storage {
+  @include responsive(desktop) {
+    grid-column: 3 /4;
+    width: 540px;
+
+    &::after {
+      @include pseudo(22px, 22px);
+      top: 19px;
+      right: 26px;
+      border-left: 22px solid transparent;
+      border-right: 22px solid transparent;
+      border-bottom: 22px solid #fff;
+      transform: rotate(45deg);
+    }
+  }
+
+  &::before {
+    @include pseudo(179px, 72px);
+    background-color: white;
+    border-radius: 10px;
+    top: 160px;
+    @include responsive(desktop) {
+      top: -50px;
+      right: 40px;
+      border-radius: 10px 10px 0px 10px;
+    }
+  }
+  &__block {
+    text-align: center;
+    @include responsive(desktop) {
+      position: relative;
+      top: 30px;
+      text-align: left;
+      margin-left: 39px;
+    }
+  }
+
+  &__range {
+    width: 262px;
+    margin-block: 16px;
+    color: black;
+    @include responsive(desktop) {
+      width: 461px;
+    }
+  }
+
+  &__dimension {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 32px;
+  }
+
+  &__remain {
+    position: relative;
+    top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include responsive(desktop) {
+      top: -185px;
+      right: -120px;
+    }
+  }
+}

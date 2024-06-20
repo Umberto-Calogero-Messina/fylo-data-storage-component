@@ -1,1 +1,16 @@
+@use '../mixins/responsive.scss' as *;
 
+.main {
+  width: 375px;
+  height: 667px;
+  background-image: url(../../assets/images/bg-mobile.png);
+  @include responsive(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr;
+    width: 1440px;
+    background-color: #0f1b3d;
+
+    background-image: url(../../assets/images/bg-desktop.png);
+    background-repeat: no-repeat;
+  }
+}

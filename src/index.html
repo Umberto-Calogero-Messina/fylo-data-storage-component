@@ -3,12 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <!-- PON UN FAVICON!!! -->
-    <link rel="icon" type="image/svg+xml" href="" />
+    <link rel="icon" type="image/svg+xml"
+      href="./assets/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
     <!-- CAMBIA EL TITLE!!! -->
     <title>Vite Template</title>
   </head>
   <body>
+    <main class="main">
+      <div class="files">
+        <div class="files__block">
+          <img class="files__logo" src="./assets/images/logo.svg"
+            alt="logo fylo">
+          <div class="files__folders">
+            <div class="files__box"><img class="files__image"
+                src="./assets/images/icon-document.svg" alt>
+            </div>
+            <div class="files__box">
+              <img class="files__image" src="./assets/images/icon-folder.svg"
+                alt>
+            </div>
+            <div class="files__box">
+              <img class="files__image" src="./assets/images/icon-upload.svg"
+                alt>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="storage">
+        <div class="storage__block">
+          <span class="storage__text text text--normal">You’ve used </span>
+          <span class="storage__text text text--bold text--normal">815 GB</span>
+          <span class="storage__text text text--normal">of your
+            storage</span>
+          <input class="storage__range" type="range" name id>
+          <div class="storage__dimension">
+            <span class="text text--small">0 GB</span>
+            <span class="text text--small">1000 GB</span>
+          </div>
+          <div class="storage__remain">
+            <span class="text--big text--line text--bold text--font">185</span>
+            <span class="text--small text--font">GB LEFT</span>
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>
